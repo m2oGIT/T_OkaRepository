@@ -24,8 +24,9 @@ package Java001;
    * 処理を起動します。 <br />
    * @param args 実行時引数
    */
+  //改行ありで引数1・引数2を表示
     public static void main( String[] args ) {
-      System.out.println( args[0] + "\n" + args[1]);    //改行ありで引数1・引数2を表示
+      System.out.println( args[0] + "\n" + args[1]);
     }
 
   }

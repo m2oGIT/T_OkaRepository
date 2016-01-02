@@ -28,10 +28,12 @@ public class Test10 {
    */
   public static void main( String[] args ) {
     // Test07のaddメソッドを呼び出し、戻り値を表示する。
-    
+
     int sum;
-    sum = Test07.add( 1, 20 ); // メソッドを呼び出す
-    System.out.println( sum ); // 戻り値表示。
+
+    sum = Test07.add( 5, 20 );
+
+    System.out.println( sum );
   }
 
 }

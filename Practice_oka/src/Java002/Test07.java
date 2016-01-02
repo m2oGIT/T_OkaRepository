@@ -9,10 +9,11 @@ package Java002;
  * 1~100の数値をループで回して、加算する <br />
  * 更新履歴 2015/12/05 岡智美：新規作成 <br />
  * 更新履歴 2015/12/06 岡智美：addメソッド追加 <br />
+ * 更新履歴 2015/01/02 岡智美：初期値相違バグ修正 <br />
  */
 
 public class Test07 {
-  
+
   /**
    * コンストラクタ <br />
    * デフォルトコンストラクタ <br />
@@ -28,24 +29,32 @@ public class Test07 {
    * 
    * @param args 実行時引数
    */
+  // 1~100の総和を求め、表示する。
   public static void main( String[] args ) {
-    int i; // ループ用項目
-    int sum = 0; // 加算累積用項目
-    for ( i = 0; i <= 100; i++ ) { // iの初期値＝1　i≦100の間、iを1ずつ加算しながら{}内処理を実行する。
+    int sum = 0;
+
+    for ( int i = 1; i <= 100; i++ ) {
       sum = sum + i;
     }
-    System.out.println( sum ); // 処理結果表示。
+
+    System.out.println( sum );
   }
 
   /**
    * addメソッド <br />
-   * a~bの数字を全て加算し、結果を戻り値で返します。 <br />
+   * 引数a~引数bの総和を求め、結果を戻り値で返す。 <br />
+   * 
+   * @param a ：初期値
+   * @param b ：加算上限値
+   * @return sum ：加算結果
    */
   public static int add( int a, int b ) {
-    int sum = 0; // 加算累積用項目
-    for ( a = 0; a <= b; a++ ) { // iの初期値＝1　i≦100の間、iを1ずつ加算しながら{}内処理を実行する。
-      sum = sum + a;
+    int sum = 0;
+
+    for ( int i = a; i <= b; i++ ) {
+      sum = sum + i;
     }
+
     return sum;
   }
 
